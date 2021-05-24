@@ -135,5 +135,15 @@ namespace wsrprb_05
            
             MessageBox.Show("Данные сохранены");
         }
+
+        private void Nazad_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.agentBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this._wsrprb_05DataSet);
+            this.Hide();
+            Agentes agentes = new Agentes();
+            agentes.Show();
+        }
     }
 }

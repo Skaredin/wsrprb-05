@@ -45,6 +45,8 @@ namespace wsrprb_05
             System.Windows.Forms.Label prioritetLabel;
             System.Windows.Forms.Label logoLabel;
             System.Windows.Forms.Label tip_agentaLabel;
+            System.Windows.Forms.Label oblastLabel;
+            System.Windows.Forms.Label gorodLabel;
             this.label1 = new System.Windows.Forms.Label();
             this._wsrprb_05DataSet = new wsrprb_05._wsrprb_05DataSet();
             this.agentBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -82,6 +84,9 @@ namespace wsrprb_05
             this.Save = new System.Windows.Forms.Button();
             this.PhotoPB = new System.Windows.Forms.PictureBox();
             this.tip_agentaComboBox = new System.Windows.Forms.ComboBox();
+            this.oblastComboBox = new System.Windows.Forms.ComboBox();
+            this.gorodComboBox = new System.Windows.Forms.ComboBox();
+            this.Nazad = new System.Windows.Forms.Label();
             id_INNAgentaLabel = new System.Windows.Forms.Label();
             kPPLabel = new System.Windows.Forms.Label();
             naimenovanie_agentaLabel = new System.Windows.Forms.Label();
@@ -96,6 +101,8 @@ namespace wsrprb_05
             prioritetLabel = new System.Windows.Forms.Label();
             logoLabel = new System.Windows.Forms.Label();
             tip_agentaLabel = new System.Windows.Forms.Label();
+            oblastLabel = new System.Windows.Forms.Label();
+            gorodLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this._wsrprb_05DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.agentBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.agentBindingNavigator)).BeginInit();
@@ -168,7 +175,7 @@ namespace wsrprb_05
             this.agentBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.agentBindingNavigator.Name = "agentBindingNavigator";
             this.agentBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.agentBindingNavigator.Size = new System.Drawing.Size(783, 25);
+            this.agentBindingNavigator.Size = new System.Drawing.Size(864, 25);
             this.agentBindingNavigator.TabIndex = 4;
             this.agentBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -270,16 +277,17 @@ namespace wsrprb_05
             // id_INNAgentaLabel
             // 
             id_INNAgentaLabel.AutoSize = true;
-            id_INNAgentaLabel.Location = new System.Drawing.Point(263, 107);
+            id_INNAgentaLabel.Font = new System.Drawing.Font("Monotype Corsiva", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            id_INNAgentaLabel.Location = new System.Drawing.Point(282, 84);
             id_INNAgentaLabel.Name = "id_INNAgentaLabel";
-            id_INNAgentaLabel.Size = new System.Drawing.Size(34, 13);
+            id_INNAgentaLabel.Size = new System.Drawing.Size(63, 25);
             id_INNAgentaLabel.TabIndex = 4;
             id_INNAgentaLabel.Text = "ИНН:";
             // 
             // id_INNAgentaTextBox
             // 
             this.id_INNAgentaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.agentBindingSource, "Id_INNAgenta", true));
-            this.id_INNAgentaTextBox.Location = new System.Drawing.Point(383, 104);
+            this.id_INNAgentaTextBox.Location = new System.Drawing.Point(500, 89);
             this.id_INNAgentaTextBox.Name = "id_INNAgentaTextBox";
             this.id_INNAgentaTextBox.Size = new System.Drawing.Size(121, 20);
             this.id_INNAgentaTextBox.TabIndex = 5;
@@ -287,16 +295,17 @@ namespace wsrprb_05
             // kPPLabel
             // 
             kPPLabel.AutoSize = true;
-            kPPLabel.Location = new System.Drawing.Point(263, 133);
+            kPPLabel.Font = new System.Drawing.Font("Monotype Corsiva", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            kPPLabel.Location = new System.Drawing.Point(282, 110);
             kPPLabel.Name = "kPPLabel";
-            kPPLabel.Size = new System.Drawing.Size(33, 13);
+            kPPLabel.Size = new System.Drawing.Size(63, 25);
             kPPLabel.TabIndex = 6;
             kPPLabel.Text = "КПП:";
             // 
             // kPPTextBox
             // 
             this.kPPTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.agentBindingSource, "KPP", true));
-            this.kPPTextBox.Location = new System.Drawing.Point(383, 130);
+            this.kPPTextBox.Location = new System.Drawing.Point(500, 115);
             this.kPPTextBox.Name = "kPPTextBox";
             this.kPPTextBox.Size = new System.Drawing.Size(121, 20);
             this.kPPTextBox.TabIndex = 7;
@@ -304,16 +313,17 @@ namespace wsrprb_05
             // naimenovanie_agentaLabel
             // 
             naimenovanie_agentaLabel.AutoSize = true;
-            naimenovanie_agentaLabel.Location = new System.Drawing.Point(263, 185);
+            naimenovanie_agentaLabel.Font = new System.Drawing.Font("Monotype Corsiva", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            naimenovanie_agentaLabel.Location = new System.Drawing.Point(282, 162);
             naimenovanie_agentaLabel.Name = "naimenovanie_agentaLabel";
-            naimenovanie_agentaLabel.Size = new System.Drawing.Size(114, 13);
+            naimenovanie_agentaLabel.Size = new System.Drawing.Size(212, 25);
             naimenovanie_agentaLabel.TabIndex = 10;
-            naimenovanie_agentaLabel.Text = "Naimenovanie agenta:";
+            naimenovanie_agentaLabel.Text = "Наименование агента:";
             // 
             // naimenovanie_agentaTextBox
             // 
             this.naimenovanie_agentaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.agentBindingSource, "Naimenovanie_agenta", true));
-            this.naimenovanie_agentaTextBox.Location = new System.Drawing.Point(383, 182);
+            this.naimenovanie_agentaTextBox.Location = new System.Drawing.Point(500, 167);
             this.naimenovanie_agentaTextBox.Name = "naimenovanie_agentaTextBox";
             this.naimenovanie_agentaTextBox.Size = new System.Drawing.Size(121, 20);
             this.naimenovanie_agentaTextBox.TabIndex = 11;
@@ -321,16 +331,17 @@ namespace wsrprb_05
             // emailLabel
             // 
             emailLabel.AutoSize = true;
-            emailLabel.Location = new System.Drawing.Point(13, 189);
+            emailLabel.Font = new System.Drawing.Font("Monotype Corsiva", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            emailLabel.Location = new System.Drawing.Point(15, 162);
             emailLabel.Name = "emailLabel";
-            emailLabel.Size = new System.Drawing.Size(35, 13);
+            emailLabel.Size = new System.Drawing.Size(68, 25);
             emailLabel.TabIndex = 12;
             emailLabel.Text = "Email:";
             // 
             // emailTextBox
             // 
             this.emailTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.agentBindingSource, "Email", true));
-            this.emailTextBox.Location = new System.Drawing.Point(133, 186);
+            this.emailTextBox.Location = new System.Drawing.Point(155, 167);
             this.emailTextBox.Name = "emailTextBox";
             this.emailTextBox.Size = new System.Drawing.Size(121, 20);
             this.emailTextBox.TabIndex = 13;
@@ -338,16 +349,17 @@ namespace wsrprb_05
             // telefonLabel
             // 
             telefonLabel.AutoSize = true;
-            telefonLabel.Location = new System.Drawing.Point(13, 215);
+            telefonLabel.Font = new System.Drawing.Font("Monotype Corsiva", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            telefonLabel.Location = new System.Drawing.Point(15, 188);
             telefonLabel.Name = "telefonLabel";
-            telefonLabel.Size = new System.Drawing.Size(46, 13);
+            telefonLabel.Size = new System.Drawing.Size(98, 25);
             telefonLabel.TabIndex = 14;
-            telefonLabel.Text = "Telefon:";
+            telefonLabel.Text = "Телефон:";
             // 
             // telefonTextBox
             // 
             this.telefonTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.agentBindingSource, "Telefon", true));
-            this.telefonTextBox.Location = new System.Drawing.Point(133, 212);
+            this.telefonTextBox.Location = new System.Drawing.Point(155, 193);
             this.telefonTextBox.Name = "telefonTextBox";
             this.telefonTextBox.Size = new System.Drawing.Size(121, 20);
             this.telefonTextBox.TabIndex = 15;
@@ -355,16 +367,17 @@ namespace wsrprb_05
             // indeksLabel
             // 
             indeksLabel.AutoSize = true;
-            indeksLabel.Location = new System.Drawing.Point(263, 211);
+            indeksLabel.Font = new System.Drawing.Font("Monotype Corsiva", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            indeksLabel.Location = new System.Drawing.Point(282, 188);
             indeksLabel.Name = "indeksLabel";
-            indeksLabel.Size = new System.Drawing.Size(48, 13);
+            indeksLabel.Size = new System.Drawing.Size(79, 25);
             indeksLabel.TabIndex = 16;
             indeksLabel.Text = "Индекс:";
             // 
             // indeksTextBox
             // 
             this.indeksTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.agentBindingSource, "Indeks", true));
-            this.indeksTextBox.Location = new System.Drawing.Point(383, 208);
+            this.indeksTextBox.Location = new System.Drawing.Point(500, 193);
             this.indeksTextBox.Name = "indeksTextBox";
             this.indeksTextBox.Size = new System.Drawing.Size(121, 20);
             this.indeksTextBox.TabIndex = 17;
@@ -372,16 +385,17 @@ namespace wsrprb_05
             // ylicaLabel
             // 
             ylicaLabel.AutoSize = true;
-            ylicaLabel.Location = new System.Drawing.Point(263, 289);
+            ylicaLabel.Font = new System.Drawing.Font("Monotype Corsiva", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            ylicaLabel.Location = new System.Drawing.Point(282, 266);
             ylicaLabel.Name = "ylicaLabel";
-            ylicaLabel.Size = new System.Drawing.Size(33, 13);
+            ylicaLabel.Size = new System.Drawing.Size(76, 25);
             ylicaLabel.TabIndex = 22;
-            ylicaLabel.Text = "Ylica:";
+            ylicaLabel.Text = "Улица:";
             // 
             // ylicaTextBox
             // 
             this.ylicaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.agentBindingSource, "Ylica", true));
-            this.ylicaTextBox.Location = new System.Drawing.Point(383, 286);
+            this.ylicaTextBox.Location = new System.Drawing.Point(500, 271);
             this.ylicaTextBox.Name = "ylicaTextBox";
             this.ylicaTextBox.Size = new System.Drawing.Size(121, 20);
             this.ylicaTextBox.TabIndex = 23;
@@ -389,16 +403,17 @@ namespace wsrprb_05
             // domLabel
             // 
             domLabel.AutoSize = true;
-            domLabel.Location = new System.Drawing.Point(263, 315);
+            domLabel.Font = new System.Drawing.Font("Monotype Corsiva", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            domLabel.Location = new System.Drawing.Point(282, 292);
             domLabel.Name = "domLabel";
-            domLabel.Size = new System.Drawing.Size(32, 13);
+            domLabel.Size = new System.Drawing.Size(57, 25);
             domLabel.TabIndex = 24;
-            domLabel.Text = "Dom:";
+            domLabel.Text = "Дом:";
             // 
             // domTextBox
             // 
             this.domTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.agentBindingSource, "Dom", true));
-            this.domTextBox.Location = new System.Drawing.Point(383, 312);
+            this.domTextBox.Location = new System.Drawing.Point(500, 297);
             this.domTextBox.Name = "domTextBox";
             this.domTextBox.Size = new System.Drawing.Size(121, 20);
             this.domTextBox.TabIndex = 25;
@@ -406,16 +421,17 @@ namespace wsrprb_05
             // imaLabel
             // 
             imaLabel.AutoSize = true;
-            imaLabel.Location = new System.Drawing.Point(13, 111);
+            imaLabel.Font = new System.Drawing.Font("Monotype Corsiva", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            imaLabel.Location = new System.Drawing.Point(15, 84);
             imaLabel.Name = "imaLabel";
-            imaLabel.Size = new System.Drawing.Size(27, 13);
+            imaLabel.Size = new System.Drawing.Size(58, 25);
             imaLabel.TabIndex = 26;
-            imaLabel.Text = "Ima:";
+            imaLabel.Text = "Имя:";
             // 
             // imaTextBox
             // 
             this.imaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.agentBindingSource, "Ima", true));
-            this.imaTextBox.Location = new System.Drawing.Point(133, 108);
+            this.imaTextBox.Location = new System.Drawing.Point(155, 89);
             this.imaTextBox.Name = "imaTextBox";
             this.imaTextBox.Size = new System.Drawing.Size(121, 20);
             this.imaTextBox.TabIndex = 27;
@@ -423,16 +439,17 @@ namespace wsrprb_05
             // otcesatvoLabel
             // 
             otcesatvoLabel.AutoSize = true;
-            otcesatvoLabel.Location = new System.Drawing.Point(13, 137);
+            otcesatvoLabel.Font = new System.Drawing.Font("Monotype Corsiva", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            otcesatvoLabel.Location = new System.Drawing.Point(15, 110);
             otcesatvoLabel.Name = "otcesatvoLabel";
-            otcesatvoLabel.Size = new System.Drawing.Size(59, 13);
+            otcesatvoLabel.Size = new System.Drawing.Size(104, 25);
             otcesatvoLabel.TabIndex = 28;
-            otcesatvoLabel.Text = "Otcesatvo:";
+            otcesatvoLabel.Text = "Отчество:";
             // 
             // otcesatvoTextBox
             // 
             this.otcesatvoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.agentBindingSource, "Otcesatvo", true));
-            this.otcesatvoTextBox.Location = new System.Drawing.Point(133, 134);
+            this.otcesatvoTextBox.Location = new System.Drawing.Point(155, 115);
             this.otcesatvoTextBox.Name = "otcesatvoTextBox";
             this.otcesatvoTextBox.Size = new System.Drawing.Size(121, 20);
             this.otcesatvoTextBox.TabIndex = 29;
@@ -440,16 +457,17 @@ namespace wsrprb_05
             // familiaLabel
             // 
             familiaLabel.AutoSize = true;
-            familiaLabel.Location = new System.Drawing.Point(13, 163);
+            familiaLabel.Font = new System.Drawing.Font("Monotype Corsiva", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            familiaLabel.Location = new System.Drawing.Point(15, 136);
             familiaLabel.Name = "familiaLabel";
-            familiaLabel.Size = new System.Drawing.Size(42, 13);
+            familiaLabel.Size = new System.Drawing.Size(102, 25);
             familiaLabel.TabIndex = 30;
-            familiaLabel.Text = "Familia:";
+            familiaLabel.Text = "Фамилия:";
             // 
             // familiaTextBox
             // 
             this.familiaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.agentBindingSource, "Familia", true));
-            this.familiaTextBox.Location = new System.Drawing.Point(133, 160);
+            this.familiaTextBox.Location = new System.Drawing.Point(155, 141);
             this.familiaTextBox.Name = "familiaTextBox";
             this.familiaTextBox.Size = new System.Drawing.Size(121, 20);
             this.familiaTextBox.TabIndex = 31;
@@ -457,16 +475,17 @@ namespace wsrprb_05
             // prioritetLabel
             // 
             prioritetLabel.AutoSize = true;
-            prioritetLabel.Location = new System.Drawing.Point(13, 268);
+            prioritetLabel.Font = new System.Drawing.Font("Monotype Corsiva", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            prioritetLabel.Location = new System.Drawing.Point(15, 241);
             prioritetLabel.Name = "prioritetLabel";
-            prioritetLabel.Size = new System.Drawing.Size(45, 13);
+            prioritetLabel.Size = new System.Drawing.Size(120, 25);
             prioritetLabel.TabIndex = 32;
-            prioritetLabel.Text = "Prioritet:";
+            prioritetLabel.Text = "Приоритет:";
             // 
             // prioritetTextBox
             // 
             this.prioritetTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.agentBindingSource, "Prioritet", true));
-            this.prioritetTextBox.Location = new System.Drawing.Point(133, 265);
+            this.prioritetTextBox.Location = new System.Drawing.Point(155, 246);
             this.prioritetTextBox.Name = "prioritetTextBox";
             this.prioritetTextBox.Size = new System.Drawing.Size(121, 20);
             this.prioritetTextBox.TabIndex = 33;
@@ -474,11 +493,12 @@ namespace wsrprb_05
             // logoLabel
             // 
             logoLabel.AutoSize = true;
-            logoLabel.Location = new System.Drawing.Point(13, 241);
+            logoLabel.Font = new System.Drawing.Font("Monotype Corsiva", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            logoLabel.Location = new System.Drawing.Point(15, 214);
             logoLabel.Name = "logoLabel";
-            logoLabel.Size = new System.Drawing.Size(34, 13);
+            logoLabel.Size = new System.Drawing.Size(134, 25);
             logoLabel.TabIndex = 34;
-            logoLabel.Text = "Logo:";
+            logoLabel.Text = "Изображение:";
             // 
             // logoComboBox
             // 
@@ -576,7 +596,7 @@ namespace wsrprb_05
             "agents\\agent_24.png",
             "agents\\agent_36.png",
             "agents\\agent_55.png"});
-            this.logoComboBox.Location = new System.Drawing.Point(133, 238);
+            this.logoComboBox.Location = new System.Drawing.Point(155, 219);
             this.logoComboBox.Name = "logoComboBox";
             this.logoComboBox.Size = new System.Drawing.Size(121, 21);
             this.logoComboBox.TabIndex = 35;
@@ -586,7 +606,7 @@ namespace wsrprb_05
             this.Deleted.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.Deleted.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(215)))), ((int)(((byte)(255)))));
             this.Deleted.Font = new System.Drawing.Font("Monotype Corsiva", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.Deleted.Location = new System.Drawing.Point(302, 351);
+            this.Deleted.Location = new System.Drawing.Point(302, 343);
             this.Deleted.Name = "Deleted";
             this.Deleted.Size = new System.Drawing.Size(141, 35);
             this.Deleted.TabIndex = 40;
@@ -599,7 +619,7 @@ namespace wsrprb_05
             this.Left.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.Left.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(215)))), ((int)(((byte)(255)))));
             this.Left.Font = new System.Drawing.Font("Monotype Corsiva", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.Left.Location = new System.Drawing.Point(8, 351);
+            this.Left.Location = new System.Drawing.Point(8, 343);
             this.Left.Name = "Left";
             this.Left.Size = new System.Drawing.Size(141, 35);
             this.Left.TabIndex = 39;
@@ -612,7 +632,7 @@ namespace wsrprb_05
             this.Rigiht.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.Rigiht.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(215)))), ((int)(((byte)(255)))));
             this.Rigiht.Font = new System.Drawing.Font("Monotype Corsiva", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.Rigiht.Location = new System.Drawing.Point(155, 351);
+            this.Rigiht.Location = new System.Drawing.Point(155, 343);
             this.Rigiht.Name = "Rigiht";
             this.Rigiht.Size = new System.Drawing.Size(141, 35);
             this.Rigiht.TabIndex = 38;
@@ -625,7 +645,7 @@ namespace wsrprb_05
             this.Save.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.Save.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(215)))), ((int)(((byte)(255)))));
             this.Save.Font = new System.Drawing.Font("Monotype Corsiva", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.Save.Location = new System.Drawing.Point(449, 351);
+            this.Save.Location = new System.Drawing.Point(449, 343);
             this.Save.Name = "Save";
             this.Save.Size = new System.Drawing.Size(141, 35);
             this.Save.TabIndex = 36;
@@ -638,19 +658,20 @@ namespace wsrprb_05
             this.PhotoPB.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.PhotoPB.Location = new System.Drawing.Point(510, 94);
+            this.PhotoPB.Location = new System.Drawing.Point(627, 89);
             this.PhotoPB.Name = "PhotoPB";
-            this.PhotoPB.Size = new System.Drawing.Size(238, 246);
-            this.PhotoPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PhotoPB.Size = new System.Drawing.Size(228, 228);
+            this.PhotoPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.PhotoPB.TabIndex = 41;
             this.PhotoPB.TabStop = false;
             // 
             // tip_agentaLabel
             // 
             tip_agentaLabel.AutoSize = true;
-            tip_agentaLabel.Location = new System.Drawing.Point(263, 159);
+            tip_agentaLabel.Font = new System.Drawing.Font("Monotype Corsiva", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            tip_agentaLabel.Location = new System.Drawing.Point(282, 136);
             tip_agentaLabel.Name = "tip_agentaLabel";
-            tip_agentaLabel.Size = new System.Drawing.Size(66, 13);
+            tip_agentaLabel.Size = new System.Drawing.Size(128, 25);
             tip_agentaLabel.TabIndex = 41;
             tip_agentaLabel.Text = "Тип агента:";
             // 
@@ -658,16 +679,152 @@ namespace wsrprb_05
             // 
             this.tip_agentaComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.agentBindingSource, "Tip_agenta", true));
             this.tip_agentaComboBox.FormattingEnabled = true;
-            this.tip_agentaComboBox.Location = new System.Drawing.Point(383, 156);
+            this.tip_agentaComboBox.Location = new System.Drawing.Point(500, 141);
             this.tip_agentaComboBox.Name = "tip_agentaComboBox";
             this.tip_agentaComboBox.Size = new System.Drawing.Size(121, 21);
             this.tip_agentaComboBox.TabIndex = 42;
+            // 
+            // oblastLabel
+            // 
+            oblastLabel.AutoSize = true;
+            oblastLabel.Font = new System.Drawing.Font("Monotype Corsiva", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            oblastLabel.Location = new System.Drawing.Point(282, 214);
+            oblastLabel.Name = "oblastLabel";
+            oblastLabel.Size = new System.Drawing.Size(94, 25);
+            oblastLabel.TabIndex = 42;
+            oblastLabel.Text = "Область:";
+            // 
+            // oblastComboBox
+            // 
+            this.oblastComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.agentBindingSource, "Oblast", true));
+            this.oblastComboBox.FormattingEnabled = true;
+            this.oblastComboBox.Items.AddRange(new object[] {
+            " Амурская область",
+            " Архангельская область",
+            " Астраханская область",
+            " Белгородская область",
+            " Брянская область",
+            " Волгоградская область",
+            " Вологодская область",
+            " Воронежская область",
+            " Ивановская область",
+            " Иркутская область",
+            " Калининградская область",
+            " Калужская область",
+            " Кемеровская область",
+            " Кировская область",
+            " Костромская область",
+            " Курганская область",
+            " Курская область",
+            " Ленинградская область",
+            " Магаданская область",
+            " Московская область",
+            " Мурманская область",
+            " Нижегородская область",
+            " Новгородская область",
+            " Новосибирская область",
+            " Омская область",
+            " Оренбургская область",
+            " Орловская область",
+            " Пензенская область",
+            " Псковская область",
+            " Ростовская область",
+            " Рязанская область",
+            " Самарская область",
+            " Саратовская область",
+            " Сахалинская область",
+            " Свердловская область",
+            " Смоленская область",
+            " Тамбовская область",
+            " Тверская область",
+            " Томская область",
+            " Тульская область",
+            " Тюменская область",
+            " Ульяновская область",
+            " Челябинская область",
+            " Читинская область"});
+            this.oblastComboBox.Location = new System.Drawing.Point(500, 219);
+            this.oblastComboBox.Name = "oblastComboBox";
+            this.oblastComboBox.Size = new System.Drawing.Size(121, 21);
+            this.oblastComboBox.TabIndex = 43;
+            // 
+            // gorodLabel
+            // 
+            gorodLabel.AutoSize = true;
+            gorodLabel.Font = new System.Drawing.Font("Monotype Corsiva", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            gorodLabel.Location = new System.Drawing.Point(282, 239);
+            gorodLabel.Name = "gorodLabel";
+            gorodLabel.Size = new System.Drawing.Size(68, 25);
+            gorodLabel.TabIndex = 43;
+            gorodLabel.Text = "Город:";
+            // 
+            // gorodComboBox
+            // 
+            this.gorodComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.agentBindingSource, "Gorod", true));
+            this.gorodComboBox.FormattingEnabled = true;
+            this.gorodComboBox.Items.AddRange(new object[] {
+            " город Балашиха",
+            " город Видное",
+            " город Волоколамск",
+            " город Воскресенск",
+            " город Домодедово",
+            " город Дорохово",
+            " город Егорьевск",
+            " город Зарайск",
+            " город Истра",
+            " город Кашира",
+            " город Клин",
+            " город Коломна",
+            " город Красногорск",
+            " город Лотошино",
+            " город Луховицы",
+            " город Можайск",
+            " город Москва",
+            " город Мытищи",
+            " город Наро-Фоминск",
+            " город Ногинск",
+            " город Одинцово",
+            " город Озёры",
+            " город Павловский Посад",
+            " город Пушкино",
+            " город Раменское",
+            " город Сергиев Посад",
+            " город Серебряные Пруды",
+            " город Серпухов",
+            " город Солнечногорск",
+            " город Ступино",
+            " город Талдом",
+            " город Чехов",
+            " город Шатура",
+            " город Шаховская",
+            " город Щёлково"});
+            this.gorodComboBox.Location = new System.Drawing.Point(500, 244);
+            this.gorodComboBox.Name = "gorodComboBox";
+            this.gorodComboBox.Size = new System.Drawing.Size(121, 21);
+            this.gorodComboBox.TabIndex = 44;
+            // 
+            // Nazad
+            // 
+            this.Nazad.AutoSize = true;
+            this.Nazad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(215)))), ((int)(((byte)(255)))));
+            this.Nazad.Font = new System.Drawing.Font("Monotype Corsiva", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Nazad.Location = new System.Drawing.Point(17, 38);
+            this.Nazad.Name = "Nazad";
+            this.Nazad.Size = new System.Drawing.Size(30, 13);
+            this.Nazad.TabIndex = 115;
+            this.Nazad.Text = "<----";
+            this.Nazad.Click += new System.EventHandler(this.Nazad_Click);
             // 
             // Redaktirovanie_agentes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(783, 398);
+            this.ClientSize = new System.Drawing.Size(864, 390);
+            this.Controls.Add(this.Nazad);
+            this.Controls.Add(gorodLabel);
+            this.Controls.Add(this.gorodComboBox);
+            this.Controls.Add(oblastLabel);
+            this.Controls.Add(this.oblastComboBox);
             this.Controls.Add(tip_agentaLabel);
             this.Controls.Add(this.tip_agentaComboBox);
             this.Controls.Add(this.PhotoPB);
@@ -757,5 +914,8 @@ namespace wsrprb_05
         private System.Windows.Forms.Button Save;
         private System.Windows.Forms.PictureBox PhotoPB;
         private System.Windows.Forms.ComboBox tip_agentaComboBox;
+        private System.Windows.Forms.ComboBox oblastComboBox;
+        private System.Windows.Forms.ComboBox gorodComboBox;
+        private System.Windows.Forms.Label Nazad;
     }
 }
