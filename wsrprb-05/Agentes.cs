@@ -65,5 +65,96 @@ namespace wsrprb_05
             Redaktirovanie_agentes redaktirovanie_Agentes = new Redaktirovanie_agentes();
             redaktirovanie_Agentes.Show();
         }
+
+        private void SortirovkaName_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+               
+                if (SortirovkaName.Text == "От а до я")
+                {
+                    agentDataGridView.Sort(dataGridViewTextBoxColumn4, ListSortDirection.Ascending);
+                    
+                }
+                else if (SortirovkaName.Text == "От я до а")
+                {
+                    agentDataGridView.Sort(dataGridViewTextBoxColumn4, ListSortDirection.Descending);
+                  
+                }
+                else if (SortirovkaName.Text == "Всё")
+                {
+                    agentBindingSource.Filter = "";
+
+                }
+
+
+
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void SortirovkaPrioritet_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+
+                if (SortirovkaPrioritet.Text == "От а до я")
+                {
+                    agentDataGridView.Sort(dataGridViewTextBoxColumn15, ListSortDirection.Ascending);
+
+                }
+                else if (SortirovkaPrioritet.Text == "От я до а")
+                {
+                    agentDataGridView.Sort(dataGridViewTextBoxColumn15, ListSortDirection.Descending);
+
+                }
+                else if (SortirovkaPrioritet.Text == "Всё")
+                {
+                    agentBindingSource.Filter = "";
+
+                }
+
+
+
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void FiltraciaTipAgent_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (FiltraciaTipAgent.Text == "Все")
+            {
+                agentBindingSource.Filter = "Tip_agenta like'*" + "" + "'";
+
+            }
+            else { agentBindingSource.Filter = "Tip_agenta like'*" + FiltraciaTipAgent.Text + "'"; }
+
+        }
+
+        private void filter_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                
+
+                agentBindingSource.Filter = "Email like'*" + filter.Text + "*' or Telefon like'*" + filter.Text + "*' or Naimenovanie_agenta like'*" + filter.Text + "'" ;
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+
+        }
     }
 }

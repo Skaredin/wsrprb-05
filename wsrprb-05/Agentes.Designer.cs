@@ -37,21 +37,19 @@ namespace wsrprb_05
             this.agentTableAdapter = new wsrprb_05._wsrprb_05DataSetTableAdapters.AgentTableAdapter();
             this.tableAdapterManager = new wsrprb_05._wsrprb_05DataSetTableAdapters.TableAdapterManager();
             this.agentBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.agentBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.agentDataGridView = new System.Windows.Forms.DataGridView();
-            this.Redaktirovanie = new System.Windows.Forms.Button();
-            this.Add = new System.Windows.Forms.Button();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -68,6 +66,17 @@ namespace wsrprb_05
             this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Redaktirovanie = new System.Windows.Forms.Button();
+            this.Add = new System.Windows.Forms.Button();
+            this.Nazad = new System.Windows.Forms.Label();
+            this.SortirovkaName = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.SortirovkaPrioritet = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.FiltraciaTipAgent = new System.Windows.Forms.ComboBox();
+            this.label = new System.Windows.Forms.Label();
+            this.filter = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this._wsrprb_05DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.agentBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.agentBindingNavigator)).BeginInit();
@@ -144,6 +153,31 @@ namespace wsrprb_05
             this.agentBindingNavigator.TabIndex = 3;
             this.agentBindingNavigator.Text = "bindingNavigator1";
             // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorAddNewItem.Text = "Добавить";
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(43, 22);
+            this.bindingNavigatorCountItem.Text = "для {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Общее число элементов";
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorDeleteItem.Text = "Удалить";
+            // 
             // bindingNavigatorMoveFirstItem
             // 
             this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -177,16 +211,9 @@ namespace wsrprb_05
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Текущее положение";
             // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(43, 22);
-            this.bindingNavigatorCountItem.Text = "для {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Общее число элементов";
-            // 
             // bindingNavigatorSeparator1
             // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
             this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
             // bindingNavigatorMoveNextItem
@@ -209,26 +236,8 @@ namespace wsrprb_05
             // 
             // bindingNavigatorSeparator2
             // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorAddNewItem.Text = "Добавить";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorDeleteItem.Text = "Удалить";
             // 
             // agentBindingNavigatorSaveItem
             // 
@@ -241,7 +250,8 @@ namespace wsrprb_05
             // 
             // agentDataGridView
             // 
-            this.agentDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.agentDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.agentDataGridView.AutoGenerateColumns = false;
             this.agentDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -263,35 +273,10 @@ namespace wsrprb_05
             this.dataGridViewTextBoxColumn15,
             this.dataGridViewTextBoxColumn16});
             this.agentDataGridView.DataSource = this.agentBindingSource;
-            this.agentDataGridView.Location = new System.Drawing.Point(12, 123);
+            this.agentDataGridView.Location = new System.Drawing.Point(12, 191);
             this.agentDataGridView.Name = "agentDataGridView";
-            this.agentDataGridView.Size = new System.Drawing.Size(776, 315);
+            this.agentDataGridView.Size = new System.Drawing.Size(776, 247);
             this.agentDataGridView.TabIndex = 3;
-            // 
-            // Redaktirovanie
-            // 
-            this.Redaktirovanie.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Redaktirovanie.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(215)))), ((int)(((byte)(255)))));
-            this.Redaktirovanie.Font = new System.Drawing.Font("Monotype Corsiva", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.Redaktirovanie.Location = new System.Drawing.Point(516, 82);
-            this.Redaktirovanie.Name = "Redaktirovanie";
-            this.Redaktirovanie.Size = new System.Drawing.Size(133, 35);
-            this.Redaktirovanie.TabIndex = 4;
-            this.Redaktirovanie.Text = "Редактирование";
-            this.Redaktirovanie.UseVisualStyleBackColor = false;
-            this.Redaktirovanie.Click += new System.EventHandler(this.Redaktirovanie_Click);
-            // 
-            // Add
-            // 
-            this.Add.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Add.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(215)))), ((int)(((byte)(255)))));
-            this.Add.Font = new System.Drawing.Font("Monotype Corsiva", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.Add.Location = new System.Drawing.Point(655, 82);
-            this.Add.Name = "Add";
-            this.Add.Size = new System.Drawing.Size(133, 35);
-            this.Add.TabIndex = 5;
-            this.Add.Text = "Добавление";
-            this.Add.UseVisualStyleBackColor = false;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -389,12 +374,148 @@ namespace wsrprb_05
             this.dataGridViewTextBoxColumn16.HeaderText = "Картинка";
             this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
             // 
+            // Redaktirovanie
+            // 
+            this.Redaktirovanie.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Redaktirovanie.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(215)))), ((int)(((byte)(255)))));
+            this.Redaktirovanie.Font = new System.Drawing.Font("Monotype Corsiva", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.Redaktirovanie.Location = new System.Drawing.Point(516, 150);
+            this.Redaktirovanie.Name = "Redaktirovanie";
+            this.Redaktirovanie.Size = new System.Drawing.Size(133, 35);
+            this.Redaktirovanie.TabIndex = 4;
+            this.Redaktirovanie.Text = "Редактирование";
+            this.Redaktirovanie.UseVisualStyleBackColor = false;
+            this.Redaktirovanie.Click += new System.EventHandler(this.Redaktirovanie_Click);
+            // 
+            // Add
+            // 
+            this.Add.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Add.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(215)))), ((int)(((byte)(255)))));
+            this.Add.Font = new System.Drawing.Font("Monotype Corsiva", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.Add.Location = new System.Drawing.Point(655, 150);
+            this.Add.Name = "Add";
+            this.Add.Size = new System.Drawing.Size(133, 35);
+            this.Add.TabIndex = 5;
+            this.Add.Text = "Добавление";
+            this.Add.UseVisualStyleBackColor = false;
+            // 
+            // Nazad
+            // 
+            this.Nazad.AutoSize = true;
+            this.Nazad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(215)))), ((int)(((byte)(255)))));
+            this.Nazad.Location = new System.Drawing.Point(9, 37);
+            this.Nazad.Name = "Nazad";
+            this.Nazad.Size = new System.Drawing.Size(25, 13);
+            this.Nazad.TabIndex = 115;
+            this.Nazad.Text = "<----";
+            // 
+            // SortirovkaName
+            // 
+            this.SortirovkaName.FormattingEnabled = true;
+            this.SortirovkaName.Items.AddRange(new object[] {
+            "Всё",
+            "От а до я",
+            "От я до а"});
+            this.SortirovkaName.Location = new System.Drawing.Point(146, 82);
+            this.SortirovkaName.Name = "SortirovkaName";
+            this.SortirovkaName.Size = new System.Drawing.Size(121, 21);
+            this.SortirovkaName.TabIndex = 116;
+            this.SortirovkaName.Text = "Всё";
+            this.SortirovkaName.SelectedIndexChanged += new System.EventHandler(this.SortirovkaName_SelectedIndexChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(12, 85);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(104, 13);
+            this.label2.TabIndex = 117;
+            this.label2.Text = "Сортиров агентьов";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(12, 112);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(128, 13);
+            this.label3.TabIndex = 119;
+            this.label3.Text = "Сортировка приоритета";
+            // 
+            // SortirovkaPrioritet
+            // 
+            this.SortirovkaPrioritet.FormattingEnabled = true;
+            this.SortirovkaPrioritet.Items.AddRange(new object[] {
+            "Всё",
+            "От а до я",
+            "От я до а"});
+            this.SortirovkaPrioritet.Location = new System.Drawing.Point(146, 109);
+            this.SortirovkaPrioritet.Name = "SortirovkaPrioritet";
+            this.SortirovkaPrioritet.Size = new System.Drawing.Size(121, 21);
+            this.SortirovkaPrioritet.TabIndex = 118;
+            this.SortirovkaPrioritet.Text = "Всё";
+            this.SortirovkaPrioritet.SelectedIndexChanged += new System.EventHandler(this.SortirovkaPrioritet_SelectedIndexChanged);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(272, 85);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(148, 13);
+            this.label4.TabIndex = 121;
+            this.label4.Text = "Фильтрация по типу агента";
+            // 
+            // FiltraciaTipAgent
+            // 
+            this.FiltraciaTipAgent.FormattingEnabled = true;
+            this.FiltraciaTipAgent.Items.AddRange(new object[] {
+            "Все",
+            "МФО",
+            "ПАО",
+            "ООО",
+            "ЗАО",
+            "ОАО",
+            "МКК"});
+            this.FiltraciaTipAgent.Location = new System.Drawing.Point(426, 82);
+            this.FiltraciaTipAgent.Name = "FiltraciaTipAgent";
+            this.FiltraciaTipAgent.Size = new System.Drawing.Size(121, 21);
+            this.FiltraciaTipAgent.TabIndex = 120;
+            this.FiltraciaTipAgent.Text = "Все";
+            this.FiltraciaTipAgent.SelectedIndexChanged += new System.EventHandler(this.FiltraciaTipAgent_SelectedIndexChanged);
+            // 
+            // label
+            // 
+            this.label.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label.AutoSize = true;
+            this.label.Location = new System.Drawing.Point(273, 112);
+            this.label.Name = "label";
+            this.label.Size = new System.Drawing.Size(67, 13);
+            this.label.TabIndex = 123;
+            this.label.Text = "Сортировка";
+            // 
+            // filter
+            // 
+            this.filter.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.filter.Location = new System.Drawing.Point(426, 109);
+            this.filter.Name = "filter";
+            this.filter.Size = new System.Drawing.Size(121, 20);
+            this.filter.TabIndex = 122;
+            this.filter.TextChanged += new System.EventHandler(this.filter_TextChanged);
+            // 
             // Agentes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label);
+            this.Controls.Add(this.filter);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.FiltraciaTipAgent);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.SortirovkaPrioritet);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.SortirovkaName);
+            this.Controls.Add(this.Nazad);
             this.Controls.Add(this.Add);
             this.Controls.Add(this.Redaktirovanie);
             this.Controls.Add(this.agentDataGridView);
@@ -454,5 +575,14 @@ namespace wsrprb_05
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
+        private System.Windows.Forms.Label Nazad;
+        private System.Windows.Forms.ComboBox SortirovkaName;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox SortirovkaPrioritet;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ComboBox FiltraciaTipAgent;
+        private System.Windows.Forms.Label label;
+        private System.Windows.Forms.TextBox filter;
     }
 }
